@@ -1,0 +1,51 @@
+{% load staticfiles %}
+
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+addLoadEvent = function(func){if(typeof jQuery!="undefined")jQuery(document).ready(func);else if(typeof wpOnload!='function'){wpOnload=func;}else{var oldonload=wpOnload;wpOnload=function(){oldonload();func();}}};
+var ajaxurl = '/wordpress/wp-admin/admin-ajax.php',
+	pagenow = 'edit-post',
+	typenow = 'post',
+	adminpage = 'edit-php',
+	thousandsSeparator = ',',
+	decimalPoint = '.',
+	isRtl = 0;
+</script>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="{% static 'blog/index/load-styles.php' %}" type="text/css" media="all">
+<link rel="stylesheet" id="open-sans-css" href="{% static 'blog/index/css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="zh-cn-l10n-administration-screens-css" href="{% static 'blog/index/zh_CN-administration-screens.css' %}" type="text/css" media="all">
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='ie-css'  href='http://localhost/wordpress/wp-admin/css/ie.min.css?ver=3.9.2' type='text/css' media='all' />
+<![endif]-->
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var userSettings = {"url":"\/wordpress\/","uid":"1","time":"1407891755"};/* ]]> */
+</script><style type="text/css"></style>
+<script type="text/javascript" src="{% static 'blog/index/load-scripts.php' %}"></script>
+<script type="text/javascript">var _wpColorScheme = {"icons":{"base":"#999","focus":"#2ea2cc","current":"#fff"}};</script>
+<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+</head>
+<body class="wp-admin wp-core-ui js  edit-php auto-fold admin-bar post-type-post branch-3-9 version-3-9-2 admin-color-fresh locale-zh-cn customize-support sticky-menu svg">
+<script type="text/javascript">
+	document.body.className = document.body.className.replace('no-js','js');
+</script>
+
+	<script type="text/javascript">
+		(function() {
+			var request, b = document.body, c = 'className', cs = 'customize-support', rcs = new RegExp('(^|\\s+)(no-)?'+cs+'(\\s+|$)');
+
+			request = true;
+
+			b[c] = b[c].replace( rcs, ' ' );
+			b[c] += ( window.postMessage && request ? ' ' : ' no-' ) + cs;
+		}());
+	</script>
+</head>
+<body>
+
+</body>
+</html>

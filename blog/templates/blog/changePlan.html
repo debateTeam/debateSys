@@ -1,0 +1,31 @@
+{% load staticfiles %}
+
+
+<!-- Place this in the body of the page content -->
+<form method="post" action='../save/'>
+		 {% csrf_token %}
+	<h2><input name='title' value = {{plan.title}} ></h2>
+    <textarea name= 'content'>{{plan.content}}</textarea>
+    <input type='hidden' name='id' value = {{plan.id}}>
+    <input type='submit' value="确认">
+    <input type='button' onclick = "history.go(-1)" value="取消">
+</form>
+
+<script type="text/javascript" src="{% static 'blog/js/tinymce/tinymce.min.js' %}"  ></script>
+<script type="text/javascript">
+tinymce.init({
+    selector: "textarea",
+   language:"zh_CN",        
+
+    plugins: 'link paste code image',
+                                    paste_as_text: true,
+                                    browser_spellcheck: true,
+                                    convert_urls: false,
+                                    valid_elements: '*[*]',
+                                    height: 480,
+                                    autoresize_min_height: 320,
+                                    autoresize_max_height: 1280,
+                                    body_class: 'cms-page'
+ });
+</script>
+

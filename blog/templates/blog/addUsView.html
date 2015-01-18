@@ -1,0 +1,21 @@
+
+{% load staticfiles %}
+
+<form method = 'post' action = 'addUs'>
+	 {% csrf_token %}
+	<h2>标题<input name='title' value ='' ></h2>
+	<h3>输入优先级<input name="order" value="">（数字）</h3>
+    <textarea name= 'content'></textarea>
+    <input type='submit' value="确认">
+    <input type='button' onclick = "history.go(-1)" value="取消">
+</form>
+
+<script type="text/javascript" src="{% static 'blog/js/tinymce/tinymce.min.js' %}"  ></script>
+<script type="text/javascript">
+tinymce.init({
+    selector: "textarea",
+   language:"zh_CN",		
+
+ });
+</script>
+

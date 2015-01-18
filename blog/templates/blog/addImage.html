@@ -1,0 +1,20 @@
+{% load staticfiles %}
+
+
+<form action="addImageInfo" method="POST" enctype="multipart/form-data">
+         {% csrf_token %}
+    <input name='img' id='img' type="file" onchange="change(this.value)">
+    <input type='hidden' id = 'title' name = 'title' value="">
+    <br>
+    <input  type="submit" value="确认">
+    <input type='button' onclick = "history.go(-1)" value="取消">
+</form>
+<img src="/site_media/IMG_0451.jpg"</img>
+<script type="text/javascript">
+    function change(imgName){
+        var imgInfo = document.getElementById('title');
+        var infoArr = imgName.split('\\');
+        imgInfo.value = infoArr[infoArr.length-1];
+    }
+
+</script>

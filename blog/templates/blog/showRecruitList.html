@@ -1,0 +1,632 @@
+{% load staticfiles %}
+<html lang="en" class="no-js"><!--<![endif]--><!-- BEGIN HEAD --><head>
+
+	<meta charset="utf-8">
+
+	<title>Metronic | Admin Dashboard Template</title>
+
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+	<meta content="" name="description">
+
+	<meta content="" name="author">
+
+	<!-- BEGIN GLOBAL MANDATORY STYLES -->
+
+	<link href="{% static 'blog/media/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+
+	<link href="{% static 'blog/media/css/bootstrap-responsive.min.css' %}" rel="stylesheet" type="text/css">
+
+	<link href="{% static 'blog/media/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+
+	<link href="{% static 'blog/media/css/style-metro.css' %}" rel="stylesheet" type="text/css">
+
+	<link href="{% static 'blog/media/css/style.css' %}" rel="stylesheet" type="text/css">
+
+	<link href="{% static 'blog/media/css/style-responsive.css' %}" rel="stylesheet" type="text/css">
+
+	<link href="{% static 'blog/media/css/default.css' %}" rel="stylesheet" type="text/css" id="style_color">
+
+	<link href="{% static 'blog/media/css/uniform.default.css' %}" rel="stylesheet" type="text/css">
+
+	<!-- END GLOBAL MANDATORY STYLES -->
+
+	<!-- BEGIN PAGE LEVEL STYLES --> 
+
+	<link href="{% static 'blog/media/css/jquery.gritter.css' %}" rel="stylesheet" type="text/css">
+
+	<link href="{% static 'blog/media/css/daterangepicker.css' %}" rel="stylesheet" type="text/css">
+
+	<link href="{% static 'blog/media/css/fullcalendar.css' %}" rel="stylesheet" type="text/css">
+
+	<link href="{% static 'blog/media/css/jqvmap.css' %}" rel="stylesheet" type="text/css" media="screen">
+
+	<link href="{% static 'blog/media/css/jquery.easy-pie-chart.css' %}" rel="stylesheet" type="text/css" media="screen">
+
+	<!-- END PAGE LEVEL STYLES -->
+
+	<link rel="shortcut icon" href="media/image/favicon.ico">
+<script type="text/javascript">
+addLoadEvent = function(func){if(typeof jQuery!="undefined")jQuery(document).ready(func);else if(typeof wpOnload!='function'){wpOnload=func;}else{var oldonload=wpOnload;wpOnload=function(){oldonload();func();}}};
+var ajaxurl = '/wordpress/wp-admin/admin-ajax.php',
+	pagenow = 'edit-post',
+	typenow = 'post',
+	adminpage = 'edit-php',
+	thousandsSeparator = ',',
+	decimalPoint = '.',
+	isRtl = 0;
+</script>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="{% static 'blog/index/load-styles.php' %}" type="text/css" media="all">
+<link rel="stylesheet" id="open-sans-css" href="{% static 'blog/index/css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="zh-cn-l10n-administration-screens-css" href="{% static 'blog/index/zh_CN-administration-screens.css' %}" type="text/css" media="all">
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='ie-css'  href='http://localhost/wordpress/wp-admin/css/ie.min.css?ver=3.9.2' type='text/css' media='all' />
+<![endif]-->
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var userSettings = {"url":"\/wordpress\/","uid":"1","time":"1407891755"};/* ]]> */
+</script><style type="text/css"></style>
+<script type="text/javascript" src="{% static 'blog/index/load-scripts.php' %}"></script>
+<script type="text/javascript">var _wpColorScheme = {"icons":{"base":"#999","focus":"#2ea2cc","current":"#fff"}};</script>
+<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+</head>
+<body class="wp-admin wp-core-ui js  edit-php auto-fold admin-bar post-type-post branch-3-9 version-3-9-2 admin-color-fresh locale-zh-cn customize-support sticky-menu svg">
+<script type="text/javascript">
+	document.body.className = document.body.className.replace('no-js','js');
+</script>
+
+	<script type="text/javascript">
+		(function() {
+			var request, b = document.body, c = 'className', cs = 'customize-support', rcs = new RegExp('(^|\\s+)(no-)?'+cs+'(\\s+|$)');
+
+			request = true;
+
+			b[c] = b[c].replace( rcs, ' ' );
+			b[c] += ( window.postMessage && request ? ' ' : ' no-' ) + cs;
+		}());
+	</script>
+</head>
+<style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style>
+
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+
+<body class="page-header-fixed" style="">
+
+	<!-- BEGIN HEADER -->
+
+	<div class="header navbar navbar-inverse navbar-fixed-top">
+
+		<!-- BEGIN TOP NAVIGATION BAR -->
+
+		<div class="navbar-inner">
+
+				<div class="navbar-inner">
+			<div style="margin-left:90%">
+			<button href = "logout" class="dropdown user" onclick = "window.location.href='logout'" style = "posi">退出登录</button>
+		</div>
+		</div>
+
+		</div>
+
+		<!-- END TOP NAVIGATION BAR -->
+
+	</div>
+
+	<!-- END HEADER -->
+
+	<!-- BEGIN CONTAINER -->
+
+	<div class="page-container">
+
+		<!-- BEGIN SIDEBAR -->
+
+		<div class="page-sidebar nav-collapse collapse">
+
+			<!-- BEGIN SIDEBAR MENU -->        
+
+			
+			{% include 'blog/left.html'  %}
+
+			<!-- END SIDEBAR MENU -->
+
+		</div>
+
+		<!-- END SIDEBAR -->
+
+		<!-- BEGIN PAGE -->
+
+		<div class="page-content">
+			<div id="wpbody-content" aria-label="主内容" tabindex="0" style="margin-top:40px">
+		<div id="screen-meta" class="metabox-prefs">
+
+			<div id="contextual-help-wrap" class="hidden" tabindex="-1" aria-label="“上下文帮助”选项卡">
+				<div id="contextual-help-back"></div>
+				<div id="contextual-help-columns">
+					<div class="contextual-help-tabs">
+						<ul>
+						
+							<li id="tab-link-overview" class="active">
+								<a href="#tab-panel-overview" aria-controls="tab-panel-overview">
+									概述								</a>
+							</li>
+						
+							<li id="tab-link-screen-content">
+								<a href="#tab-panel-screen-content" aria-controls="tab-panel-screen-content">
+									页面内容								</a>
+							</li>
+						
+							<li id="tab-link-action-links">
+								<a href="#tab-panel-action-links" aria-controls="tab-panel-action-links">
+									可进行的操作								</a>
+							</li>
+						
+							<li id="tab-link-bulk-actions">
+								<a href="#tab-panel-bulk-actions" aria-controls="tab-panel-bulk-actions">
+									批量操作								</a>
+							</li>
+						
+							<li id="tab-link-twentyfourteen">
+								<a href="#tab-panel-twentyfourteen" aria-controls="tab-panel-twentyfourteen">
+									Twenty Fourteen								</a>
+							</li>
+												</ul>
+					</div>
+
+										<div class="contextual-help-sidebar">
+						<p><strong>更多信息：</strong></p><p><a href="http://codex.wordpress.org/zh-cn:%E6%96%87%E7%AB%A0%E9%A1%B5%E9%9D%A2" target="_blank">关于文章管理的中文文档</a></p><p><a href="http://cn.forums.wordpress.org" target="_blank">中文支持论坛</a></p>					</div>
+					
+					<div class="contextual-help-tabs-wrap">
+						
+							<div id="tab-panel-overview" class="help-tab-content active">
+								<p>本页面提供文章相关的所有功能。您可以自定义页面的样式来使工作更顺手。</p>							</div>
+						
+							<div id="tab-panel-screen-content" class="help-tab-content">
+								<p>您可以通过以下方法来自定义本页面内容的显示方式：</p><ul><li>您可在“显示选项”中依据您的需要隐藏或显示每页显示的文章数量。</li><li>您可以通过点击列表左上方的文字链接来过滤列表显示的项目——全部、已发布、草稿、回收站。默认视图中，显示所有文章。</li><li>您可以选择是否在列表中查看文章摘要。点击列表右上方的图标可在两种模式中进行切换。</li><li>通过在文章列表上方的下拉菜单中选择，您可单独查看显示某一分类中的文章，或是某月发布的文章。点击列表中作者、分类，或标签也可令列表只显示那些内容。</li></ul>							</div>
+						
+							<div id="tab-panel-action-links" class="help-tab-content">
+								<p>将鼠标光标悬停在文章列表中的某一行，操作链接将会显示出来，您可以通过它们快速管理文章。您可进行下列操作：</p><ul><li>点击<strong>编辑</strong>可在编辑器中编辑该文章。直接点击文章标题也可以达到同样的效果。</li><li>点击<strong>快速编辑</strong>，您无须跳转到其它页面，在本页内就能对文章属性进行更改。</li><li>点击<strong>移至回收站</strong>，该文章将会从列表中删除，并自动移至回收站。在回收站中，您可永久删除它。</li><li>点击<strong>预览/查看</strong>，您的浏览器将跳转到前台，为您展示文章发布后的效果，或访问已经发布的这篇文章。</li></ul>							</div>
+						
+							<div id="tab-panel-bulk-actions" class="help-tab-content">
+								<p>您也可以一次删除/回收多个文件。使用文章左侧的复选框，选择您需要操作的文件，然后从“批量操作”下拉菜单中选择您的操作类型。点击“应用”，操作即生效。</p><p>在使用“批量编辑”时，您可以一次编辑这些文章的多个属性（分类目录、作者等）。要从待编辑文章中移除某篇，请在“批量编辑”区域中点击其标题旁边的“x”。</p>							</div>
+						
+							<div id="tab-panel-twentyfourteen" class="help-tab-content">
+								<ul><li>The home page features your choice of up to 6 posts prominently displayed in a grid or slider, controlled by a <a href="/wordpress/wp-admin/edit.php?tag=特色">tag</a>; you can change the tag and layout in <a href="/wordpress/wp-admin/customize.php">Appearance → Customize</a>. If no posts match the tag, <a href="/wordpress/wp-admin/edit.php?show_sticky=1">sticky posts</a> will be displayed instead.</li><li>您可在您希望脱颖而出的文章中显示<a href="http://codex.wordpress.org/Post_Thumbnails#Setting_a_Post_Thumbnail">特色图片</a>（或称文章缩略图），这可让您将图片关联到文章，而无需在文章中插入该图片。Twenty Fourteen在文章与页面的标题之上显示特色图片，也会在主页的特色内容区显示。</li><li>要查阅详细教程和更多提示与技巧，请访问<a href="http://codex.wordpress.org/Twenty_Fourteen">Twenty Fourteen文档</a>。</li></ul>							</div>
+											</div>
+				</div>
+			</div>
+				<div id="screen-options-wrap" class="hidden" tabindex="-1" aria-label="“显示选项”选项卡">
+		<form id="adv-settings" action="" method="post">
+					<h5>显示下列项目</h5>
+					<div class="metabox-prefs">
+				<label for="author-hide"><input class="hide-column-tog" name="author-hide" type="checkbox" id="author-hide" value="author" checked="checked">作者</label>
+<label for="categories-hide"><input class="hide-column-tog" name="categories-hide" type="checkbox" id="categories-hide" value="categories" checked="checked">分类目录</label>
+<label for="tags-hide"><input class="hide-column-tog" name="tags-hide" type="checkbox" id="tags-hide" value="tags" checked="checked">标签</label>
+<label for="comments-hide"><input class="hide-column-tog" name="comments-hide" type="checkbox" id="comments-hide" value="comments" checked="checked">评论</label>
+<label for="date-hide"><input class="hide-column-tog" name="date-hide" type="checkbox" id="date-hide" value="date" checked="checked">日期</label>
+				<br class="clear">
+			</div>
+				<div class="screen-options">
+							<input type="number" step="1" min="1" max="999" class="screen-per-page" name="wp_screen_options[value]" id="edit_post_per_page" maxlength="3" value="20">
+				<label for="edit_post_per_page">
+					新闻				</label>
+			<input type="submit" name="screen-options-apply" id="screen-options-apply" class="button" value="应用">			<input type="hidden" name="wp_screen_options[option]" value="edit_post_per_page">
+		</div>
+				<div><input type="hidden" id="screenoptionnonce" name="screenoptionnonce" value="5cdd7608a8"></div>
+		</form>
+		</div>
+				</div>
+				<div id="screen-meta-links">
+					<div id="contextual-help-link-wrap" class="hide-if-no-js screen-meta-toggle">
+			<a href="#contextual-help-wrap" id="contextual-help-link" class="show-settings" aria-controls="contextual-help-wrap" aria-expanded="false">帮助</a>
+			</div>
+					<div id="screen-options-link-wrap" class="hide-if-no-js screen-meta-toggle">
+			<a href="#screen-options-wrap" id="show-settings-link" class="show-settings" aria-controls="screen-options-wrap" aria-expanded="false">显示选项</a>
+			</div>
+				</div>
+		<div class="wrap">
+<h2>article4 <a href="/blog/recruit/add/" class="add-new-h2">add article4</a></h2>
+
+
+
+<form id="posts-filter" action="" method="get">
+
+<input type="hidden" name="orderby" value="title"><input type="hidden" name="order" value="asc">
+
+<input type="hidden" name="post_status" class="post_status_page" value="all">
+<input type="hidden" name="post_type" class="post_type_page" value="post">
+
+<input type="hidden" id="_wpnonce" name="_wpnonce" value="e924fa65ff"><input type="hidden" name="_wp_http_referer" value="/wordpress/wp-admin/edit.php?orderby=title&amp;order=asc">	
+<table class="wp-list-table widefat fixed posts">
+	<thead>
+	<tr>
+		<th scope="col" id="title" class="manage-column column-title sorted asc" style=""><span>标题</span></th><th scope="col" id="categories" class="manage-column column-categories" style="">分类目录</th>
+	</tr>
+	</thead>
+
+
+	{% block content %}
+    <ul>
+        {% for publisher in recruit %}
+           
+            	<tbody id="the-list">
+				<tr id="post-1" class="post-1 type-post status-publish format-standard hentry category-uncategorized alternate iedit author-self level-0">
+				
+			<td class="post-title page-title column-title"><strong><a class="row-title" href="/blog/recruit/change/{{publisher.id}}" title="编辑{{ publisher.title }}">{{ publisher.title }}</a></strong>
+<div class="locked-info"><span class="locked-avatar"></span> <span class="locked-text"></span></div>
+<div class="row-actions"><span class="edit"><a href="/blog/recruit/change/{{publisher.id}}" title="编辑此项目">编辑</a>  </span><span class="trash"><a class="submitdelete" title="移动此项目到回收站" href="/blog/recruit/delete/{{publisher.id}}">回收站</a> | </span><span class="view"><a href="/wordpress/?p=1" title="查看“世界，你好！”" rel="permalink">查看</a></span></div>
+</td>		
+			<td class="categories column-categories">article4</td>
+				</tr>
+		</tbody>
+        {% endfor %}
+    </ul>
+
+	{% endblock %}
+
+</table>
+
+		<br class="clear">
+	</div>
+
+</form>
+
+
+	<form method="get" action=""><table style="display: none"><tbody id="inlineedit">
+		
+		<tr id="inline-edit" class="inline-edit-row inline-edit-row-post inline-edit-post quick-edit-row quick-edit-row-post inline-edit-post" style="display: none"><td colspan="7" class="colspanchange">
+
+		<fieldset class="inline-edit-col-left"><div class="inline-edit-col">
+			<h4>快速编辑</h4>
+	
+			<label>
+				<span class="title">标题</span>
+				<span class="input-text-wrap"><input type="text" name="post_title" class="ptitle" value=""></span>
+			</label>
+
+			<label>
+				<span class="title">别名</span>
+				<span class="input-text-wrap"><input type="text" name="post_name" value=""></span>
+			</label>
+
+	
+				<label><span class="title">日期</span></label>
+			<div class="inline-edit-date">
+				<div class="timestamp-wrap"><input type="text" name="aa" value="2014" size="4" maxlength="4" autocomplete="off">年<select name="mm">
+			<option value="01">一</option>
+			<option value="02">二</option>
+			<option value="03">三</option>
+			<option value="04">四</option>
+			<option value="05">五</option>
+			<option value="06">六</option>
+			<option value="07">七</option>
+			<option value="08" selected="selected">八</option>
+			<option value="09">九</option>
+			<option value="10">十</option>
+			<option value="11">十一</option>
+			<option value="12">十二</option>
+</select>月<input type="text" name="jj" value="11" size="2" maxlength="2" autocomplete="off">日@<input type="text" name="hh" value="09" size="2" maxlength="2" autocomplete="off">:<input type="text" name="mn" value="44" size="2" maxlength="2" autocomplete="off"></div><input type="hidden" id="ss" name="ss" value="06">			</div>
+			<br class="clear">
+	
+	<label class="inline-edit-author"><span class="title">作者</span><select name="post_author" class="authors">
+	<option value="1">user</option>
+</select></label>
+			<div class="inline-edit-group">
+				<label class="alignleft">
+					<span class="title">密码</span>
+					<span class="input-text-wrap"><input type="text" name="post_password" class="inline-edit-password-input" value=""></span>
+				</label>
+
+				<em style="margin:5px 10px 0 0" class="alignleft">
+					–或–				</em>
+				<label class="alignleft inline-edit-private">
+					<input type="checkbox" name="keep_private" value="private">
+					<span class="checkbox-title">私密</span>
+				</label>
+			</div>
+
+	
+		</div></fieldset>
+
+	
+		<fieldset class="inline-edit-col-center inline-edit-categories"><div class="inline-edit-col">
+
+	
+			<span class="title inline-edit-categories-label">分类目录</span>
+			<input type="hidden" name="post_category[]" value="0">
+			<ul class="cat-checklist category-checklist">
+				
+<li id="category-1" class="popular-category"><label class="selectit"><input value="1" type="checkbox" name="post_category[]" id="in-category-1"> 未分类</label></li>
+			</ul>
+
+	
+		</div></fieldset>
+
+	
+		<fieldset class="inline-edit-col-right"><div class="inline-edit-col">
+
+	
+	
+						<label class="inline-edit-tags">
+				<span class="title">标签</span>
+				<textarea cols="22" rows="1" name="tax_input[post_tag]" class="tax_input_post_tag"></textarea>
+			</label>
+		
+	
+	
+	
+			<div class="inline-edit-group">
+							<label class="alignleft">
+					<input type="checkbox" name="comment_status" value="open">
+					<span class="checkbox-title">允许评论</span>
+				</label>
+							<label class="alignleft">
+					<input type="checkbox" name="ping_status" value="open">
+					<span class="checkbox-title">允许ping</span>
+				</label>
+						</div>
+
+	
+			<div class="inline-edit-group">
+				<label class="inline-edit-status alignleft">
+					<span class="title">状态</span>
+					<select name="_status">
+												<option value="publish">已发布</option>
+						<option value="future">定时</option>
+												<option value="pending">等待复审</option>
+						<option value="draft">草稿</option>
+					</select>
+				</label>
+
+	
+	
+				<label class="alignleft">
+					<input type="checkbox" name="sticky" value="sticky">
+					<span class="checkbox-title">置顶这篇文章</span>
+				</label>
+
+	
+	
+			</div>
+
+	
+		</div></fieldset>
+
+			<p class="submit inline-edit-save">
+			<a accesskey="c" href="#inline-edit" class="button-secondary cancel alignleft">取消</a>
+			<input type="hidden" id="_inline_edit" name="_inline_edit" value="400ce4fc5c">				<a accesskey="s" href="#inline-edit" class="button-primary save alignright">更新</a>
+				<span class="spinner"></span>
+						<input type="hidden" name="post_view" value="list">
+			<input type="hidden" name="screen" value="edit-post">
+						<span class="error" style="display:none"></span>
+			<br class="clear">
+		</p>
+		</td></tr>
+	
+		<tr id="bulk-edit" class="inline-edit-row inline-edit-row-post inline-edit-post bulk-edit-row bulk-edit-row-post bulk-edit-post" style="display: none"><td colspan="7" class="colspanchange">
+
+		<fieldset class="inline-edit-col-left"><div class="inline-edit-col">
+			<h4>批量编辑</h4>
+				<div id="bulk-title-div">
+				<div id="bulk-titles"></div>
+			</div>
+
+	
+	
+	
+		</div></fieldset><fieldset class="inline-edit-col-center inline-edit-categories"><div class="inline-edit-col">
+
+	
+			<span class="title inline-edit-categories-label">分类目录</span>
+			<input type="hidden" name="post_category[]" value="0">
+			<ul class="cat-checklist category-checklist">
+				
+<li id="category-1" class="popular-category"><label class="selectit"><input value="1" type="checkbox" name="post_category[]" id="in-category-1"> 未分类</label></li>
+			</ul>
+
+	
+		</div></fieldset>
+
+	
+		<fieldset class="inline-edit-col-right"><label class="inline-edit-tags">
+				<span class="title">标签</span>
+				<textarea cols="22" rows="1" name="tax_input[post_tag]" class="tax_input_post_tag"></textarea>
+			</label><div class="inline-edit-col">
+
+	<label class="inline-edit-author"><span class="title">作者</span><select name="post_author" class="authors">
+	<option value="-1">—无更改—</option>
+	<option value="1">user</option>
+</select></label>
+	
+	
+			<div class="inline-edit-group">
+					<label class="alignleft">
+				<span class="title">评论</span>
+				<select name="comment_status">
+					<option value="">—无更改—</option>
+					<option value="open">允许</option>
+					<option value="closed">不允许</option>
+				</select>
+			</label>
+					<label class="alignright">
+				<span class="title">Ping通告</span>
+				<select name="ping_status">
+					<option value="">—无更改—</option>
+					<option value="open">允许</option>
+					<option value="closed">不允许</option>
+				</select>
+			</label>
+					</div>
+
+	
+			<div class="inline-edit-group">
+				<label class="inline-edit-status alignleft">
+					<span class="title">状态</span>
+					<select name="_status">
+							<option value="-1">—无更改—</option>
+												<option value="publish">已发布</option>
+						
+							<option value="private">私密</option>
+												<option value="pending">等待复审</option>
+						<option value="draft">草稿</option>
+					</select>
+				</label>
+
+	
+	
+				<label class="alignright">
+					<span class="title">置顶</span>
+					<select name="sticky">
+						<option value="-1">—无更改—</option>
+						<option value="sticky">置顶</option>
+						<option value="unsticky">不置顶</option>
+					</select>
+				</label>
+
+	
+	
+			</div>
+
+			<label class="alignleft" for="post_format">
+		<span class="title">形式</span>
+		<select name="post_format">
+			<option value="-1">—无更改—</option>
+			<option value="0">标准</option>
+							<option value="aside">日志</option>
+								<option value="image">图像</option>
+								<option value="video">视频</option>
+								<option value="audio">音频</option>
+								<option value="quote">引语</option>
+								<option value="link">链接</option>
+								<option value="gallery">相册</option>
+						</select></label>
+	
+		</div></fieldset>
+
+			<p class="submit inline-edit-save">
+			<a accesskey="c" href="#inline-edit" class="button-secondary cancel alignleft">取消</a>
+			<input type="submit" name="bulk_edit" id="bulk_edit" class="button button-primary alignright" value="更新" accesskey="s">			<input type="hidden" name="post_view" value="list">
+			<input type="hidden" name="screen" value="edit-post">
+						<span class="error" style="display:none"></span>
+			<br class="clear">
+		</p>
+		</td></tr>
+			</tbody></table></form>
+
+<div id="ajax-response"></div>
+<br class="clear">
+</div>
+
+
+<div class="clear"></div></div>
+
+		</div>
+
+		<!-- END PAGE -->
+
+	</div>
+
+	<!-- END CONTAINER -->
+
+
+
+	<!-- END FOOTER -->
+
+	<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+
+	<!-- BEGIN CORE PLUGINS -->
+
+	<script type="text/javascript" async="" src="http://stats.g.doubleclick.net/dc.js"></script><script src="{% static 'blog/media/js/jquery-1.10.1.min.js' %}" type="text/javascript"></script>
+
+	<script src="{% static 'blog/media/js/jquery-migrate-1.2.1.min.js' %}" type="text/javascript"></script>
+
+	<!-- IMPORTANT! Load jquery-ui-1.10.1.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+
+	<script src="{% static 'blog/media/js/jquery-ui-1.10.1.custom.min.js' %}" type="text/javascript"></script>      
+
+	<script src="{% static 'blog/media/js/bootstrap.min.js' %}" type="text/javascript"></script>
+
+	<!--[if lt IE 9]>
+
+	<script src="{% static 'blog/media/js/excanvas.min.js"></script>
+
+	<script src="{% static 'blog/media/js/respond.min.js"></script>  
+
+	<![endif]-->   
+
+	<script src="{% static 'blog/media/js/jquery.slimscroll.min.js' %}" type="text/javascript"></script>
+
+	<script src="{% static 'blog/media/js/jquery.blockui.min.js' %}" type="text/javascript"></script>  
+
+	<script src="{% static 'blog/media/js/jquery.cookie.min.js' %}" type="text/javascript"></script>
+
+	<script src="{% static 'blog/media/js/jquery.uniform.min.js' %}" type="text/javascript"></script>
+
+	<!-- END CORE PLUGINS -->
+
+	<!-- BEGIN PAGE LEVEL PLUGINS -->
+
+	
+
+	<script src="{% static 'blog/media/js/jquery.flot.js' %}" type="text/javascript"></script>
+
+	<script src="{% static 'blog/media/js/jquery.flot.resize.js' %}" type="text/javascript"></script>
+
+	<script src="{% static 'blog/media/js/jquery.pulsate.min.js' %}" type="text/javascript"></script>
+
+	<script src="{% static 'blog/media/js/date.js' %}" type="text/javascript"></script>
+
+	<script src="{% static 'blog/media/js/daterangepicker.js' %}" type="text/javascript"></script>     
+
+	<script src="{% static 'blog/media/js/jquery.gritter.js' %}" type="text/javascript"></script>
+
+	<script src="{% static 'blog/media/js/fullcalendar.min.js' %}" type="text/javascript"></script>
+
+	<script src="{% static 'blog/media/js/jquery.easy-pie-chart.js' %}" type="text/javascript"></script>
+
+	<script src="{% static 'blog/media/js/jquery.sparkline.min.js' %}" type="text/javascript"></script>  
+
+	<!-- END PAGE LEVEL PLUGINS -->
+
+	<!-- BEGIN PAGE LEVEL SCRIPTS -->
+
+	<script src="{% static 'blog/media/js/app.js' %}" type="text/javascript"></script>
+
+	<script src="{% static 'blog/media/js/index.js' %}" type="text/javascript"></script>        
+
+	<!-- END PAGE LEVEL SCRIPTS -->  
+
+	<script>
+
+		jQuery(document).ready(function() {    
+
+		   App.init(); // initlayout and core plugins
+
+		   Index.init();
+
+		   Index.initJQVMAP(); // init index page's custom scripts
+
+		   Index.initCalendar(); // init index page's custom scripts
+
+		   Index.initCharts(); // init index page's custom scripts
+
+		   Index.initChat();
+
+		   Index.initMiniCharts();
+
+		   Index.initDashboardDaterange();
+
+		   Index.initIntro();
+
+		});
+
+	</script>
+
+	<!-- END JAVASCRIPTS -->
+
+<script type="text/javascript">  var _gaq = _gaq || [];  _gaq.push(['_setAccount', 'UA-37564768-1']);  _gaq.push(['_setDomainName', 'keenthemes.com']);  _gaq.push(['_setAllowLinker', true]);  _gaq.push(['_trackPageview']);  (function() {    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);  })();</script>
+
+<!-- END BODY -->
